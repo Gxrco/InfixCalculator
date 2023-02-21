@@ -1,8 +1,8 @@
 package Model;
 
 public class StackFactory {
-    public IStack<Integer> getInstance(String type){
-        IStack<Integer> stack = null;
+    public AbstractStack<Integer> getInstance(String type){
+        AbstractStack<Integer> stack = null;
         switch (type){
             case "vector":
                 stack = new StackUsingVector<>();
@@ -10,11 +10,11 @@ public class StackFactory {
             case "arraylist":
                 stack = new StackUsingArrayList<>();
                 break;
-            case "doublelinkedlist":
-                stack = new StackUsingDoubleLinkedList<>();
+            case "single":
+                stack = new StackUsingList<>(type);
                 break;
-            case "linkedlist":
-                stack = new StackUsingLinkedList<>();
+            case "double":
+                stack = new StackUsingList<>(type);
                 break;
             default:
                 System.out.println("Opcion invalida");

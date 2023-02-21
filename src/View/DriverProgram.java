@@ -1,5 +1,7 @@
 package View;
 
+import Controller.Calculator;
+import Controller.ReadFile;
 import Model.IStack;
 import Model.StackFactory;
 
@@ -7,11 +9,19 @@ import java.util.Scanner;
 
 public class DriverProgram {
     public static void main(String[] args) {
+        //Creacion de recursos necesarios
         Scanner sc = new Scanner(System.in);
         String stackType = selector(sc);
         StackFactory stackFactory = new StackFactory();
         IStack<Integer> stack;
+        //Inicia el programa
+
         stack = stackFactory.getInstance(stackType);
+        ReadFile reader = new ReadFile();
+
+
+        Calculator calculator = Calculator.getInstance();
+
 
 
     }
@@ -31,9 +41,9 @@ public class DriverProgram {
                 System.out.println("¿Que tipo de lista desea utilizar?:\n1. SinglyLinkedList\n2. DoublyLinkedList");
                 String opt2 = sc.nextLine();
                 if(opt2.equals("1")){
-                    return "linkedlist";
+                    return "single";
                 } else if (opt2.equals("2")) {
-                    return "doublelinkedlist";
+                    return "double";
                 } else {
                     System.out.println("La opcion seleccionada no existe");
                 }

@@ -5,13 +5,13 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class ReadFile {
+
     /**
-     * @author XavierLopez25
      *Lee la ruta del archivo donde se encuentra el Postfix
      * @param fpath ruta del archivo
      * @return data
      */
-    public static String text(String fpath){
+    public String text(String fpath){
         String data = "-";
         try {
             File myObj = new File(fpath);
