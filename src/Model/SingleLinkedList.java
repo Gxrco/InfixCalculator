@@ -1,3 +1,5 @@
+package Model;
+
 public class SingleLinkedList<T> implements IList<T> {
 
     private int count;
