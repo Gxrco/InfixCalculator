@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.AbstractStack;
 import Model.IStack;
 import Model.PostfixCalculator;
 
@@ -23,7 +24,7 @@ public class Calculator {
 
     PostfixCalculator pc = new PostfixCalculator();
 
-    public void getValue(String operator, int A, int B, IStack<Integer> stack){
+    public void getValue(String operator, int A, int B, AbstractStack<Integer> stack){
         switch(operator){
             case "+":
                 stack.push(pc.suma(A, B));
@@ -44,13 +45,14 @@ public class Calculator {
     }
 
 
-    public int mainOperation(String postfix, IStack<Integer> stack){
+    public int mainOperation(String postfix, AbstractStack<Integer> stack){
         ArrayList<String> data = pc.getItems(postfix);
         for (String datum : data) {
             if (!pc.isOperator(datum)) {
                 stack.push(Integer.valueOf(datum));
             }
         }
+
 
         for (String datum : data) {
             if (pc.isOperator(datum)) {

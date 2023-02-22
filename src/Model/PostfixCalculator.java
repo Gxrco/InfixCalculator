@@ -76,7 +76,7 @@ public class PostfixCalculator implements IPostfixCalculator{
      */
     @Override
     public ArrayList<String> getItems(String _expresion) {
-        String[] splitInput = _expresion.split(" ");
+        String[] splitInput = _expresion.split("");
         ArrayList<String> list = new ArrayList<>(Arrays.asList(splitInput));
         return list;
     }

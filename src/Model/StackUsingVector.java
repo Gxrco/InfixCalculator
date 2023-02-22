@@ -31,6 +31,6 @@ public class StackUsingVector<T> extends AbstractStack<T> {
 
     @Override
     public T peek() {
-        return vector.remove(0);
+        return vector.get(vector.size()-1);
     }
 }

@@ -21,7 +21,7 @@ public class StackUsingList<T> extends AbstractStack<T>{
 
     @Override
     public void push(T value) {
-        List.InsertAtStart(value);
+        List.InsertAtEnd(value);
     }
 
     @Override

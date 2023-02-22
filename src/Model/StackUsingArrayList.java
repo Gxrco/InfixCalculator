@@ -22,7 +22,7 @@ public class StackUsingArrayList<T> extends AbstractStack<T>{
 
     @Override
     public void push(T value) {
-        miListaInterna.add(0, value);
+        miListaInterna.add(value);
     }
 
     @Override

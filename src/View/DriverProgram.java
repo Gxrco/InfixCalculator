@@ -1,8 +1,9 @@
 package View;
 
 import Controller.Calculator;
+import Controller.InfixInterpreter;
 import Controller.ReadFile;
-import Model.IStack;
+import Model.AbstractStack;
 import Model.StackFactory;
 
 import java.util.Scanner;
@@ -10,19 +11,23 @@ import java.util.Scanner;
 public class DriverProgram {
     public static void main(String[] args) {
         //Creacion de recursos necesarios
+        String path = "C:\\Users\\thege\\GitAED\\InfixCalculator\\src\\View\\infix.txt";
         Scanner sc = new Scanner(System.in);
         String stackType = selector(sc);
         StackFactory stackFactory = new StackFactory();
-        IStack<Integer> stack;
+        AbstractStack<Integer> stack;
         //Inicia el programa
 
         stack = stackFactory.getInstance(stackType);
         ReadFile reader = new ReadFile();
-
+        String infix = reader.text(path);
+        System.out.println(infix);
+        InfixInterpreter machine = new InfixInterpreter();
+        String postfix = machine.infixToPostfix(infix);
+        System.out.println(postfix);
 
         Calculator calculator = Calculator.getInstance();
-
-
+        System.out.println(calculator.mainOperation(postfix, stack));
 
     }
 
