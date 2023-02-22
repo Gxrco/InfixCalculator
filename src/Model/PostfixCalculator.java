@@ -3,6 +3,9 @@ package Model;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * The type Postfix calculator.
+ */
 public class PostfixCalculator implements IPostfixCalculator{
 
     /**

@@ -4,12 +4,16 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+/**
+ * The type Read file.
+ */
 public class ReadFile {
 
     /**
-     *Lee la ruta del archivo donde se encuentra el Postfix
+     * Lee la ruta del archivo donde se encuentra el Postfix
+     *
      * @param fpath ruta del archivo
-     * @return data
+     * @return data string
      */
     public String text(String fpath){
         String data = "-";

@@ -7,7 +7,16 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Stack;
 
+/**
+ * The type Infix interpreter.
+ */
 public class InfixInterpreter{
+        /**
+         * Infix to postfix string.
+         *
+         * @param infixString the infix string
+         * @return the string
+         */
         public String infixToPostfix(String infixString) {
                 StringBuilder postfix = new StringBuilder();
                 Deque<Character> stack = new ArrayDeque<>();

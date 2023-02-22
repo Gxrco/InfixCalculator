@@ -1,9 +1,19 @@
 package Model;
 
+/**
+ * The type Stack using list.
+ *
+ * @param <T> the type parameter
+ */
 public class StackUsingList<T> extends AbstractStack<T>{
 
     private AbstractList<T> List;
 
+    /**
+     * Instantiates a new Stack using list.
+     *
+     * @param type the type
+     */
     public StackUsingList(String type) {
         ListFactory<T> factory = new ListFactory<>();
         List = factory.getInstance(type);

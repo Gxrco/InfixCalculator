@@ -1,5 +1,10 @@
 package Model;
 
+/**
+ * The type Single linked list.
+ *
+ * @param <T> the type parameter
+ */
 public class SingleLinkedList<T> extends AbstractList<T>{
 
     private int count;

@@ -1,10 +1,18 @@
 package Model;
 import java.util.Vector;
 
+/**
+ * The type Stack using vector.
+ *
+ * @param <T> the type parameter
+ */
 public class StackUsingVector<T> extends AbstractStack<T> {
 
     private Vector<T> vector;
 
+    /**
+     * Instantiates a new Stack using vector.
+     */
     public StackUsingVector(){
             vector = new Vector<T>();
     }

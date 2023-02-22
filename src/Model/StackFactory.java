@@ -1,6 +1,15 @@
 package Model;
 
+/**
+ * The type Stack factory.
+ */
 public class StackFactory {
+    /**
+     * Get instance abstract stack.
+     *
+     * @param type the type
+     * @return the abstract stack
+     */
     public AbstractStack<Integer> getInstance(String type){
         AbstractStack<Integer> stack = null;
         switch (type){

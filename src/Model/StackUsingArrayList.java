@@ -2,10 +2,18 @@ package Model;
 
 import java.util.ArrayList;
 
+/**
+ * The type Stack using array list.
+ *
+ * @param <T> the type parameter
+ */
 public class StackUsingArrayList<T> extends AbstractStack<T>{
 
     private ArrayList<T> miListaInterna;
 
+    /**
+     * Instantiates a new Stack using array list.
+     */
     public StackUsingArrayList() {
         miListaInterna = new ArrayList<T>();
     }

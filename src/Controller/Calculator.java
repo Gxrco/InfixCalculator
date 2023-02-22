@@ -6,6 +6,9 @@ import Model.PostfixCalculator;
 
 import java.util.ArrayList;
 
+/**
+ * The type Calculator.
+ */
 public class Calculator {
 
     private static boolean instance_flag = false;
@@ -15,6 +18,11 @@ public class Calculator {
         instance_flag = true;
     }
 
+    /**
+     * Get instance calculator.
+     *
+     * @return the calculator
+     */
     public static Calculator getInstance(){
         if (!instance_flag) {
             _uniqueCalculator = new Calculator();
@@ -22,8 +30,19 @@ public class Calculator {
         return _uniqueCalculator;
     }
 
+    /**
+     * The Pc.
+     */
     PostfixCalculator pc = new PostfixCalculator();
 
+    /**
+     * Get value.
+     *
+     * @param operator the operator
+     * @param A        the a
+     * @param B        the b
+     * @param stack    the stack
+     */
     public void getValue(String operator, int A, int B, AbstractStack<Integer> stack){
         switch(operator){
             case "+":
@@ -45,6 +64,13 @@ public class Calculator {
     }
 
 
+    /**
+     * Main operation int.
+     *
+     * @param postfix the postfix
+     * @param stack   the stack
+     * @return the int
+     */
     public int mainOperation(String postfix, AbstractStack<Integer> stack){
         ArrayList<String> data = pc.getItems(postfix);
         for (String datum : data) {
