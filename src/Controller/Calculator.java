@@ -91,3 +91,7 @@ public class Calculator {
     }
 
 }
+//Decription: Algoritmo de calculadora para hoja de trabajo 2
+//Author: Grupo 4 de Algoritmos y Estructuras de datos
+//Date: S.F
+//URL: https://github.com/Gxrco/CalculatorPostFix/blob/master/src/Controller/Calculator.java
